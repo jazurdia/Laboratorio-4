@@ -1,6 +1,8 @@
-package Principal.Modos;
+package Principal.Modos.ModoTelefonoPackage;
 
 import java.util.ArrayList;
+
+import Principal.Modos.Modo;
 
 public class ModoTelefono extends Modo {
     private boolean conexion;
