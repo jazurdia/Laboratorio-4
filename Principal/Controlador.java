@@ -1,3 +1,5 @@
+package Principal;
+
 public class Controlador {
     // esta es la clase controlador. 
 

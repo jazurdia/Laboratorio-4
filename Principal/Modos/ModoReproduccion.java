@@ -18,7 +18,7 @@ public class ModoReproduccion extends Modo {
      * @param var establece el tipo de reproduccion que es. 
      */
     public ModoReproduccion(int listaActual, int var){
-        setModo(0); //Modo Reproduccion. 
+        setModo(1); //Modo Reproduccion. 
         seleccionarPlaylist(listaActual);
         setVarInutil(var);
     }

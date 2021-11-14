@@ -8,7 +8,9 @@ public class ModoTelefono extends Modo {
     private String contactoActual;
 
     public ModoTelefono(boolean conexion){
+        setModo(2); // nodo telefono
         setConexion(true);
+        contactoActual = contactos.get(0);
     }
 
     /**
@@ -55,6 +57,14 @@ public class ModoTelefono extends Modo {
      */
     public ArrayList<String> getContactos (){
         return contactos;
+    }
+
+    /**
+     * 
+     * @return devuelve el valor de la conexion (encendido o apagado)
+     */
+    public boolean getConexion(){
+        return conexion;
     }
 
 
