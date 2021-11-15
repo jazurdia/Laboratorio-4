@@ -164,6 +164,39 @@ public class Vista{
 		return op;
 	}
 
+	public int Emisora() {
+		int emisora=0; 
+		try{
+			System.out.println("Ingrese la emisora deseada");
+			emisora=scan.nextInt(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return emisora; 
+	}
+
+	public boolean AM_FM() {
+		boolean estado=false;  
+		int op=0; 
+		try{
+			String s = "¿Que frecuencia desea utilizar?\n" +
+					"1. AM\n" +
+					"2. FM\n"; 
+			System.out.println(s);		
+			op=scan.nextInt(); 
+			if(op==1){
+				estado=true; 
+			}else{
+
+			}
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return estado; 
+	}
+
 	public String Origen() {
 		String origen=""; 
 		try{
@@ -208,7 +241,7 @@ public class Vista{
 	/*Metodo para mostrar mensaje de bienvenida al usuario
 	*/
 	public void bienvenida(){
-		System.out.println("¡Bienvendio(a) a QueOndaMano!");
+		System.out.println("¡Bienvendio(a)!");
 	}
 
 	/*Metodo para mostrar mensaje
