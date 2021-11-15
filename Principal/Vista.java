@@ -176,6 +176,47 @@ public class Vista{
 		return emisora; 
 	}
 
+	public int PlayList() {
+		int playlist=0; 
+		try{
+			String s = "¿Que desea hacer?\n" +
+					"1. Playlist 1\n" +
+					"2. Playlist 2\n" +
+					"3. Playlist 3\n"; 
+			System.out.println(s);
+			playlist=scan.nextInt(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return playlist; 
+	}
+
+	public int Cancion() {
+		int canion=0; 
+		try{
+			System.out.println("Ingrese el numero de cancion que desea escuchar");
+			canion=scan.nextInt(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return canion; 
+	}
+
+	public int  Contacto() {
+		int cel=0; 
+		try{
+			System.out.println("Ingrese el numero del contacto que desea llamara");
+			cel=scan.nextInt(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return cel; 
+	}
+
+
 	public boolean AM_FM() {
 		boolean estado=false;  
 		int op=0; 
@@ -195,6 +236,49 @@ public class Vista{
 			scan.next();
 		}		
 		return estado; 
+	}
+
+	public boolean telefono_auriculares() {
+		boolean estado=false;  
+		int op=0; 
+		try{
+			String s = "Selecciones una opcion\n" +
+					"1. Bocinas\n" +
+					"2. Auriculares\n"; 
+			System.out.println(s);		
+			op=scan.nextInt(); 
+			if(op==1){
+				estado=true; 
+			}else{
+
+			}
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return estado; 
+	}
+
+	
+	public boolean conexion() {
+		boolean estado=false;  
+		int op=0; 
+		try{
+			String s = "¿Desea conectar su telefono?\n" +
+					"1. Si\n" +
+					"2. No\n"; 
+			System.out.println(s);		
+			op=scan.nextInt(); 
+			if(op==1){
+				estado=true; 
+			}else{
+
+			}
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return conexion(); 
 	}
 
 	public String Origen() {
