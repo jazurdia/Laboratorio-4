@@ -164,23 +164,41 @@ public class Vista{
 		return op;
 	}
 
-	public String[] PlanificarViaje(String origen, String destino, String fecha) {
-		String[] datos={"", "", ""}; 
+	public String Origen() {
+		String origen=""; 
 		try{
 			System.out.println("Ingrese el punto de origen");
-			datos[0]=scan.next(); 
-			System.out.println("Ingrese el punto de destino");
-			datos[1]=scan.next(); 
-			System.out.println("Ingrese la fecha del viaje");
-			datos[2]=scan.next(); 
+			origen=scan.next(); 
 		}catch (Exception e){
 			error();
 			scan.next();
 		}		
-		return datos; 
+		return origen; 
 	}
 	
+	public String Destino() {
+		String Destino=""; 
+		try{
+			System.out.println("Ingrese el punto de destino");
+			Destino=scan.next(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return Destino; 
+	}
 
+	public String Fecha() {
+		String fecha=""; 
+		try{
+			System.out.println("Ingrese la fecha del viaje");
+			fecha=scan.next(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return fecha; 
+	}
 
     /*Metodo para mostrar mensaje de despedida al usuario
 	*/
