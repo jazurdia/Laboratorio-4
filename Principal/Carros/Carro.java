@@ -8,7 +8,7 @@ public class Carro {
         setEstado(true);
         setVolumen(50);
 
-    }// no estoy seguro que esté bien este pedo. 
+    } 
 
     //setters y getters
 
@@ -43,5 +43,10 @@ public class Carro {
     public int getVolumen(){
         return volumen;
     }
+
+    
+
+
+
 
 }
