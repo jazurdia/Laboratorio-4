@@ -261,7 +261,7 @@ public class Vista{
 
 	
 	public boolean conexion() {
-		boolean estado=false;  
+		boolean estado =false;  
 		int op=0; 
 		try{
 			String s = "¿Desea conectar su telefono?\n" +
@@ -419,7 +419,6 @@ public class Vista{
 		}else{
 			System.out.println("Se ha cambiado la entrada de audio a auriculares");
 		}
-
 	}
 	/*Metodo para mostrar mensaje
 	*/

@@ -108,16 +108,7 @@ public class CarroS extends Carro{
 
                 default:
                     break;
-            }
-
-            
-                
+            }           
         }
-
-        
-        
     }
-
-
-
 }
