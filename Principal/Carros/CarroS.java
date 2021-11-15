@@ -37,12 +37,12 @@ public class CarroS extends Carro{
                                 break;
                 
                             case 3: // cargar la emisora
-                                radio.setEmisora(0);//vista
+                                radio.setEmisora(vista.Emisora());//vista
                                 // vista para radio.getEmisoraActual();
                                 break;
                 
                             case 4: // cambiar frecuencia
-                                radio.setFrecuencia(true);
+                                radio.setFrecuencia(vista.AM_FM());
                                 break;
                             
                             case 5: // salir de este ciclo. 
@@ -60,10 +60,10 @@ public class CarroS extends Carro{
                         int menu3 = 0;
                         switch (menu3) {
                             case 1: // seleccionar playlist. 
-                                reproductor.seleccionarPlaylist(1);//vista
+                                reproductor.seleccionarPlaylist(vista.PlayList());//vista
                                 break;
                             case 2: // cambiar canción
-                                reproductor.cambiarCancion(1);
+                                reproductor.cambiarCancion(vista.Cancion());
                                 break;
                             case 3: // mostrar cancion
                                 reproductor.getCancionActual();
@@ -79,18 +79,18 @@ public class CarroS extends Carro{
                         int menu3 = 0;
                         switch (menu3) {
                             case 1:
-                                telefono.setConexion(true); // vista
+                                telefono.setConexion(vista.conexion()); // vista
                                 break;
 
                             case 2:
-                                telefono.llamarContacto(24242424); // vista
+                                telefono.llamarContacto(vista.Contacto()); // vista
                                 break;
 
                             case 3:
                                 //metodo de la vista que diga que finalizó la llamada. 
 
                             case 4:
-                                telefono.entradaAudio(true); //vista
+                                telefono.entradaAudio(vista.telefono_auriculares()); //vista
                                 break;
 
                             case 5:
@@ -101,9 +101,9 @@ public class CarroS extends Carro{
                         }
                     }
                     break;
-                    
+
                 case 4:
-                    productividad.planificarViaje("origen", "destino", "fecha");
+                    productividad.planificarViaje(vista.Origen(), vista.Destino(), vista.Fecha());
                     break;
 
                 default:
