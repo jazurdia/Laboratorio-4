@@ -163,6 +163,22 @@ public class Vista{
 		}
 		return op;
 	}
+
+	public String[] PlanificarViaje(String origen, String destino, String fecha) {
+		String[] datos={"", "", ""}; 
+		try{
+			System.out.println("Ingrese el punto de origen");
+			datos[0]=scan.next(); 
+			System.out.println("Ingrese el punto de destino");
+			datos[1]=scan.next(); 
+			System.out.println("Ingrese la fecha del viaje");
+			datos[2]=scan.next(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return datos; 
+	}
 	
 
 
@@ -183,6 +199,93 @@ public class Vista{
 		System.out.println("Has elegido una opción inválida.");
 	}
 
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void AM_FM(String modo){
+		System.out.println("La radio cambio a modo "+modo);
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void CambiarEmisora(Double emisora){
+		System.out.println("La emisora actual es "+emisora);
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void GuardarEmisora(){
+		System.out.println("Se ha guardado la emisora");
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void CargarEmisora(double emisora){
+		System.out.println("Se ha cargado la emisora "+emisora);
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void Conectar_desconectarTelefono(boolean estado){
+		if(estado==true){
+			System.out.println("Se ha conectado el telefono");
+		}else{
+			System.out.println("Se ha desconectado el telefono");
+		}
+
+	}
+
+		/*Metodo para mostrar mensaje al usuario
+	*/
+	public void CambiarCancion(){
+		System.out.println("Se ha cambiado la cancion");
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void LlamarContacto(String contacto){
+		System.out.println("Se esta llamando a "+contacto);
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void FinalizarLlamada(){
+		System.out.println("Se ha finalizado la llamada");
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void LlamadaEnEspera(){
+		System.out.println("La llamada esta en espera");
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void LlamarUltimoContacto(String contacto){
+		System.out.println("Se esta llamando a "+contacto);
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void ViajePlanificado(String origen, String destino, String fecha){
+		System.out.println("Se ha planificado su viaje desde" +origen+" hacia "+destino+" en la fecha: "+fecha);
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void PronnosticoClima(String pronostico){
+		System.out.println("El pronostico del climas es: "+pronostico);
+	}
+
+	/*Metodo para mostrar mensaje al usuario
+	*/
+	public void Bocinas_auriculares(boolean estado){
+		if(estado==true){
+			System.out.println("Se ha cambiado la entrada de audio a bocinas");
+		}else{
+			System.out.println("Se ha cambiado la entrada de audio a auriculares");
+		}
+
+	}
 	/*Metodo para mostrar mensaje
 	*/
     public void error(){
