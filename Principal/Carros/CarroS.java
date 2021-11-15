@@ -1,5 +1,6 @@
 package Principal.Carros;
 
+import Principal.Vista;
 import Principal.Modos.ModoRadio;
 import Principal.Modos.ModoReproduccion;
 import Principal.Modos.ModoProductividadPackage.ModoProductividadS;
@@ -8,6 +9,7 @@ import Principal.Modos.ModoTelefonoPackage.ModoTelefonoS;
 public class CarroS extends Carro{
     
     // Instancia  de Modos
+    Vista vista = new Vista();
     ModoRadio radio = new ModoRadio(true);
     ModoReproduccion reproductor = new ModoReproduccion(1, 1); // llamar método de la vista para esto. 
     ModoTelefonoS telefono = new ModoTelefonoS(false);
@@ -19,14 +21,11 @@ public class CarroS extends Carro{
 
         boolean stop = false;
         while(stop == true){
-            int menu2 = 0; {} //////
-            
-            switch (menu2) {
+            switch (vista.menuModo()) {
                 case 1: //MODO RADIO
                     boolean stop3a = false;
                     while (stop3a == false){           
-                        int menu3 = 0;
-                        switch (menu3){
+                        switch (vista.menuModoRadio()){
                             case 1: // cambiar de emisora
                                 radio.nextEmisora();
                                 // vista para radio.getEmisora();
@@ -38,12 +37,12 @@ public class CarroS extends Carro{
                                 break;
                 
                             case 3: // cargar la emisora
-                                radio.setEmisora(106.5);//vista
+                                radio.setEmisora(0);//vista
                                 // vista para radio.getEmisoraActual();
                                 break;
                 
                             case 4: // cambiar frecuencia
-                                radio.setFrecuencia(false);
+                                radio.setFrecuencia(true);
                                 break;
                             
                             case 5: // salir de este ciclo. 
@@ -62,7 +61,6 @@ public class CarroS extends Carro{
                         switch (menu3) {
                             case 1: // seleccionar playlist. 
                                 reproductor.seleccionarPlaylist(1);//vista
-                                
                                 break;
                             case 2: // cambiar canción
                                 reproductor.cambiarCancion(1);
@@ -73,6 +71,7 @@ public class CarroS extends Carro{
                                 break;
                         }
                     }
+                    break;
                 
                 case 3://MODO TELEFONO S
                     boolean stop3c = false;
@@ -101,7 +100,8 @@ public class CarroS extends Carro{
                                 break;
                         }
                     }
-                
+                    break;
+                    
                 case 4:
                     productividad.planificarViaje("origen", "destino", "fecha");
                     break;
