@@ -10,7 +10,7 @@ public class CarroS extends Carro{
     // Instancia  de Modos
     ModoRadio radio = new ModoRadio(true);
     ModoReproduccion reproductor = new ModoReproduccion(1, 1); // llamar método de la vista para esto. 
-    ModoTelefonoS telefono = new ModoTelefonoS(true);
+    ModoTelefonoS telefono = new ModoTelefonoS(false);
     ModoProductividadS productividad = new ModoProductividadS();
 
     
@@ -23,48 +23,89 @@ public class CarroS extends Carro{
             
             switch (menu2) {
                 case 1: //MODO RADIO
-                boolean stop3 = false;
-                while (stop3 == false){
-                /**
-                 * 1. cambiar de emisora
-                 * 2. guardar la emisora
-                 * 3. carga la emisora
-                 * 4. cambiar de FM a AM. 
-                 * 5. Salir del modo. 
-                 */
+                    boolean stop3a = false;
+                    while (stop3a == false){           
+                        int menu3 = 0;
+                        switch (menu3){
+                            case 1: // cambiar de emisora
+                                radio.nextEmisora();
+                                // vista para radio.getEmisora();
+                                break;
                 
-                int menu3 = 0;
-                switch (menu3){
-                    case 1: // cambiar de emisora
-                        radio.nextEmisora();
-                        // vista para radio.getEmisora();
-                        break;
-        
-                    case 2:// guardar la emisora
-                        radio.guardarEmisora();
-                        // vista para ver emisoras guardadas. 
-                        break;
-        
-                    case 3: // cargar la emisora
-                        radio.setEmisora(106.5);//vista
-                        // vista para radio.getEmisoraActual();
-                        break;
-        
-                    case 4: // cambiar frecuencia
-                        radio.setFrecuencia(false);
-                        break;
-                    
-                    case 5: // salir de este ciclo. 
-                        stop3 = true;
+                            case 2:// guardar la emisora
+                                radio.guardarEmisora();
+                                // vista para ver emisoras guardadas. 
+                                break;
                 
-                    default:
-                        break;
-                }
-            }    
-
-
+                            case 3: // cargar la emisora
+                                radio.setEmisora(106.5);//vista
+                                // vista para radio.getEmisoraActual();
+                                break;
+                
+                            case 4: // cambiar frecuencia
+                                radio.setFrecuencia(false);
+                                break;
+                            
+                            case 5: // salir de este ciclo. 
+                                stop3a = true;
+                        
+                            default:
+                                break;
+                        }
+                    }
                     break;
-            
+                
+                case 2: // MODO REPRODUCTOR
+                    boolean stop3b = false;
+                    while (stop3b == false){
+                        int menu3 = 0;
+                        switch (menu3) {
+                            case 1: // seleccionar playlist. 
+                                reproductor.seleccionarPlaylist(1);//vista
+                                
+                                break;
+                            case 2: // cambiar canción
+                                reproductor.cambiarCancion(1);
+                                break;
+                            case 3: // mostrar cancion
+                                reproductor.getCancionActual();
+                            default:
+                                break;
+                        }
+                    }
+                
+                case 3://MODO TELEFONO S
+                    boolean stop3c = false;
+                    while (stop3c == false){
+                        int menu3 = 0;
+                        switch (menu3) {
+                            case 1:
+                                telefono.setConexion(true); // vista
+                                break;
+
+                            case 2:
+                                telefono.llamarContacto(24242424); // vista
+                                break;
+
+                            case 3:
+                                //metodo de la vista que diga que finalizó la llamada. 
+
+                            case 4:
+                                telefono.entradaAudio(true); //vista
+                                break;
+
+                            case 5:
+                                stop3c = true;
+                        
+                            default:
+                                break;
+                        }
+                    }
+                
+                case 4:
+                    productividad.planificarViaje("origen", "destino", "fecha");
+                    break;
+
                 default:
                     break;
             }
