@@ -5,6 +5,9 @@ public class Carro {
     private int volumen;
 
     public Carro(){
+        setEstado(true);
+        setVolumen(50);
+
     }// no estoy seguro que esté bien este pedo. 
 
     //setters y getters
