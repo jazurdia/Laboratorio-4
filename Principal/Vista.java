@@ -7,10 +7,10 @@ Fecha: 15/11/2021
 Vista. Responsable de toda interaccion con el usuario.
 ***************************************************/
 import java.util.Scanner;
-public class vista{
+public class Vista{
 	private Scanner scan;
     /*Costructor de clase*/
-	public vista(){
+	public Vista(){
 		scan = new Scanner(System.in);
 	}
     public void show(String txt){
