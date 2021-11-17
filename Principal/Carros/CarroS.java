@@ -20,7 +20,7 @@ public class CarroS extends Carro{
         //Menu 2 ¿Que Modo desea usar?
 
         boolean stop = false;
-        while(stop == true){
+        while(stop == false){
             switch (vista.menuModo()) {
                 case 1: //MODO RADIO
                     boolean stop3a = false;
@@ -28,21 +28,24 @@ public class CarroS extends Carro{
                         switch (vista.menuModoRadio()){
                             case 1: // cambiar de emisora
                                 radio.nextEmisora();
+                                vista.show("La emisora actual es: " + radio.getEmisoraActual());
                                 // vista para radio.getEmisora();
                                 break;
                 
                             case 2:// guardar la emisora
                                 radio.guardarEmisora();
-                                // vista para ver emisoras guardadas. 
+                                vista.show("Se ha guardado la emisora");
                                 break;
                 
                             case 3: // cargar la emisora
                                 radio.setEmisora(vista.Emisora());//vista
+                                vista.show("La emisora actual es: " + radio.getEmisoraActual());
                                 // vista para radio.getEmisoraActual();
                                 break;
                 
                             case 4: // cambiar frecuencia
                                 radio.setFrecuencia(vista.AM_FM());
+                                vista.show("Se ha cambiado la frecuencia");
                                 break;
                             
                             case 5: // salir de este ciclo. 
@@ -66,6 +69,12 @@ public class CarroS extends Carro{
                                 break;
                             case 3: // mostrar cancion
                                 reproductor.getCancionActual();
+                                break;
+
+                            case 4:
+                                stop3b = true;
+                                break;
+                                
                             default:
                                 break;
                         }
@@ -103,6 +112,10 @@ public class CarroS extends Carro{
                 case 4:
                     //Método de la vista introductorio?
                     productividad.planificarViaje(vista.Origen(), vista.Destino(), vista.Fecha());
+                    break;
+
+                case 5:
+                    stop = true;
                     break;
 
                 default:
