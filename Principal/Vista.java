@@ -112,8 +112,8 @@ public class Vista{
 					"2. Mostrar contactos\n" +
 					"3. Llamar a contacto\n" +
 					"4. Finalizar llamada\n"+
-					"4. Cambiar a bocinas o auriculares\n"+
-					"5. Salir\n";
+					"5. Cambiar a bocinas o auriculares\n"+
+					"6. Salir\n";
 
 		System.out.println(s);
 		op = scan.nextInt();
@@ -152,8 +152,8 @@ public class Vista{
 					"2. Mostrar contactos\n" +
 					"3. Llamar a contacto\n" +
 					"4. Finalizar llamada\n"+
-					"4. Cambiar a llamada en espera \n"+
-					"5. Salir\n";
+					"5. Cambiar a llamada en espera \n"+
+					"6. Salir\n";
 
 		System.out.println(s);
 		op = scan.nextInt();
@@ -278,7 +278,7 @@ public class Vista{
 			error();
 			scan.next();
 		}		
-		return estado; 
+		return conexion(); 
 	}
 
 	public String Origen() {
@@ -405,7 +405,7 @@ public class Vista{
 	/*Metodo para mostrar mensaje al usuario
 	*/
 	public void LlamarContacto(String contacto){
-		System.out.println("Se esta llamando a " + contacto);
+		System.out.println("Se esta llamando a "+contacto);
 	}
 
 	/*Metodo para mostrar mensaje al usuario
