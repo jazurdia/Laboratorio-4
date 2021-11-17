@@ -107,6 +107,7 @@ public class CarroS extends Carro{
 
                             case 6:
                                 stop3c = true;
+                                break;
                         
                             default:
                                 break;
