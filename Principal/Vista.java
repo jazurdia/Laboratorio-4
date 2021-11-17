@@ -308,6 +308,17 @@ public class Vista{
 		}		
 		return origen; 
 	}
+
+	public void mostrarTarjetaPresentacion(String[] info) {
+		String nombre, email, telefono; 
+		nombre=info[0]; 
+		email=info[1];
+		telefono=info[2]; 
+		System.out.println("Nombre: "+nombre);
+		System.out.println("Email: "+email);
+		System.out.println("Telefono: "+telefono);
+
+	}
 	
 	public String Destino() {
 		String Destino=""; 
