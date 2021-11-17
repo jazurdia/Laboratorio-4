@@ -74,7 +74,7 @@ public class CarroA extends Carro {
                 case 3://MODO TELEFONO S
                     boolean stop3c = false;
                     while (stop3c == false){
-                        switch (vista.menuModoTelefonoS()) {
+                        switch (vista.menuModoTelefonoA()) {
                             case 1:
                                 telefono.setConexion(vista.conexion()); // vista
                                 break;
