@@ -96,7 +96,7 @@ public class CarroS extends Carro{
                                 break;
 
                             case 3:
-                                //metodo de la vista que diga que finalizó la llamada. 
+                                vista.FinalizarLlamada();
 
                             case 4:
                                 telefono.entradaAudio(vista.telefono_auriculares()); //vista
