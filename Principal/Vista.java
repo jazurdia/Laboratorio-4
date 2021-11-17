@@ -424,7 +424,9 @@ public class Vista{
 	*/
     public void error(){
         System.out.println("Ha ocurrido un error");
-      }
+    }
+
+	
 
 
 }

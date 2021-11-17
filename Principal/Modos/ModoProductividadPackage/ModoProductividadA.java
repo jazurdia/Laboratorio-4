@@ -5,9 +5,10 @@ import Principal.Interfaces.InterfacesProductividad.ProductividadA;
 public class ModoProductividadA extends ModoProductividad implements ProductividadA{
 
     @Override
-    public String mostrarTarjeta(String nombre, String email, int noCel) {
+    public String[] mostrarTarjeta(String nombre, String email, String noCel) {
         // TODO Auto-generated method stub
-        return null;
+        String[] info = new String[] {nombre, email, noCel};
+        return info;
     }
     
 }

@@ -86,7 +86,7 @@ public class CarroA extends Carro {
                                 //metodo de la vista que diga que finalizó la llamada. 
 
                             case 4:
-                                telefono.entradaAudio(vista.telefono_auriculares()); //vista
+                                telefono.llamarUltimo(); // devolver un método de la vista. 
                                 break;
 
                             case 5:
@@ -100,7 +100,7 @@ public class CarroA extends Carro {
 
                 case 4:
                     //Método de la vista introductorio?
-                    productividad.planificarViaje(vista.Origen(), vista.Destino(), vista.Fecha());
+                    productividad.mostrarTarjeta(nombre, email, noCel); //Hacen falta métodos de la vista. 
                     break;
 
                 default:
