@@ -88,7 +88,7 @@ public class CarroA extends Carro {
                                 break;
 
                             case 3:
-                                vista.show("La llamada ha finalizado");
+                            vista.FinalizarLlamada();
 
                             case 4:
                                 telefono.llamarUltimo(); // devolver un método de la vista. 

@@ -93,7 +93,7 @@ public class CarroC extends Carro {
                                 break;
 
                             case 3:
-                                //metodo de la vista que diga que finalizó la llamada. 
+                            vista.FinalizarLlamada();
 
                             case 4:
                                 telefono.llamadaEnEspera(); //vista
