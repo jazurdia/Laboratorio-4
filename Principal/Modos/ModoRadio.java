@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ModoRadio extends Modo {
     private Boolean frecuencia;
     private double emisoraActual;
-    private ArrayList<Double> emisorasGuardadas;
+    private ArrayList<Double> emisorasGuardadas = new ArrayList<Double>();
 
     /**
      * 
