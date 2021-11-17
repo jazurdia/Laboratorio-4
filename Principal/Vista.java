@@ -316,7 +316,7 @@ public class Vista{
 		telefono=info[2]; 
 		System.out.println("Nombre: "+nombre);
 		System.out.println("Email: "+email);
-		System.out.println("Telefono: "+telefono);
+		System.out.println("Telefono: " + telefono);
 
 	}
 	
