@@ -40,7 +40,6 @@ public class CarroS extends Carro{
                             case 3: // cargar la emisora
                                 radio.setEmisora(vista.Emisora());//vista
                                 vista.show("La emisora actual es: " + radio.getEmisoraActual());
-                                // vista para radio.getEmisoraActual();
                                 break;
                 
                             case 4: // cambiar frecuencia
@@ -50,6 +49,7 @@ public class CarroS extends Carro{
                             
                             case 5: // salir de este ciclo. 
                                 stop3a = true;
+                                break;
                         
                             default:
                                 break;
@@ -66,15 +66,17 @@ public class CarroS extends Carro{
                                 break;
                             case 2: // cambiar canción
                                 reproductor.cambiarCancion(vista.Cancion());
+                                vista.show("La cancion actual es: " + reproductor.getCancionActual());
                                 break;
                             case 3: // mostrar cancion
                                 reproductor.getCancionActual();
+                                vista.show("La cancion actual es: " + reproductor.getCancionActual());
                                 break;
 
                             case 4:
                                 stop3b = true;
                                 break;
-                                
+
                             default:
                                 break;
                         }
