@@ -1,5 +1,7 @@
 package Principal.Carros;
 
+import java.util.ArrayList;
+
 import Principal.Vista;
 import Principal.Modos.ModoRadio;
 import Principal.Modos.ModoReproduccion;
@@ -91,6 +93,13 @@ public class CarroS extends Carro{
                                 telefono.setConexion(vista.conexion()); // vista
                                 break;
 
+                            case 2:
+                                ArrayList<String> contactos = telefono.getContactos();
+                                for (int i = 0; i < contactos.size(); i++) {
+                                    vista.show(contactos.get(i));
+                                }
+
+                            
                             case 3:
                                 telefono.llamarContacto(vista.Contacto()); // vista
                                 vista.show("Llamando...");
