@@ -15,6 +15,7 @@ public class CarroA extends Carro {
     ModoProductividadA productividad = new ModoProductividadA();
 
     
+    @Override
     public void ex(){
         //Menu 2 ¿Que Modo desea usar?
         boolean stop = false;
@@ -99,8 +100,10 @@ public class CarroA extends Carro {
                     break;
 
                 case 4:
-                    //Método de la vista introductorio?
-                    productividad.mostrarTarjeta(nombre, email, noCel); //Hacen falta métodos de la vista. 
+                    // Esta opcion solamente tiene una funcion, mostrar una tarjeta de presentación. 
+                    String [] string = vista.TarjetaPresentacion();
+                    String [] presentacion = productividad.mostrarTarjeta(string[0], string[1], string[2]); //Hacen falta métodos de la vista. 
+                    vista.mostrarTarjetaPresentacion(presentacion);
                     break;
 
                 default:

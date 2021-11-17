@@ -1,6 +1,6 @@
 package Principal.Carros;
 
-public class Carro {
+public abstract class Carro {
     private boolean estado;
     private int volumen;
 
@@ -44,9 +44,6 @@ public class Carro {
         return volumen;
     }
 
-    
-
-
-
+    public abstract void ex();
 
 }

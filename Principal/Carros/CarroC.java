@@ -12,6 +12,8 @@ public class CarroC extends Carro {
     ModoReproduccion reproductor = new ModoReproduccion(1, 1); // llamar método de la vista para esto. 
     ModoTelefonoC telefono = new ModoTelefonoC(false);
     ModoProductividadC productividad = new ModoProductividadC();
+    
+    @Override
     public void ex(){
         //Menu 2 ¿Que Modo desea usar?
 
