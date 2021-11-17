@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import Principal.Modos.Modo;
 
 public class ModoTelefono extends Modo {
-    private boolean conexion;
-    private ArrayList<String> contactos; // constante. 
+    private boolean conexion = false;
+    private ArrayList<String> contactos = new ArrayList<String>()    ; // constante.
     private String contactoActual;
 
     public ModoTelefono(boolean conexion){
         setModo(2); // nodo telefono
-        setConexion(true);
+        setConexion(conexion);
+        crearContactos();
         contactoActual = contactos.get(0);
     }
 
@@ -67,6 +68,12 @@ public class ModoTelefono extends Modo {
      */
     public boolean getConexion(){
         return conexion;
+    }
+
+    public void crearContactos(){
+        contactos.add("Mark Hammil");
+        contactos.add("Julio Iglesias");
+        contactos.add("Winston Churchill");
     }
 
 

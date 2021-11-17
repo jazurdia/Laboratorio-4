@@ -20,7 +20,7 @@ public class CarroS extends Carro{
         //Menu 2 ¿Que Modo desea usar?
 
         boolean stop = false;
-        while(stop == true){
+        while(stop == false){
             switch (vista.menuModo()) {
                 case 1: //MODO RADIO
                     boolean stop3a = false;
@@ -103,6 +103,10 @@ public class CarroS extends Carro{
                 case 4:
                     //Método de la vista introductorio?
                     productividad.planificarViaje(vista.Origen(), vista.Destino(), vista.Fecha());
+                    break;
+
+                case 5:
+                    stop = true;
                     break;
 
                 default:
