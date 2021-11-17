@@ -292,6 +292,22 @@ public class Vista{
 		}		
 		return origen; 
 	}
+
+	public String[] TarjetaPresentacion() {
+		String[] origen={"", "", ""}; 
+		try{
+			System.out.println("Ingrese su nombre");
+			origen[0]=scan.next(); 
+			System.out.println("Ingrese su email");
+			origen[1]=scan.next(); 
+			System.out.println("Ingrese su numero de telefono");
+			origen[2]=scan.next(); 
+		}catch (Exception e){
+			error();
+			scan.next();
+		}		
+		return origen; 
+	}
 	
 	public String Destino() {
 		String Destino=""; 
