@@ -18,7 +18,7 @@ public class CarroC extends Carro {
         //Menu 2 ¿Que Modo desea usar?
 
         boolean stop = false;
-        while(stop == true){
+        while(stop == false){
             switch (vista.menuModo()) {
                 case 1: //MODO RADIO
                     boolean stop3a = false;
@@ -113,6 +113,9 @@ public class CarroC extends Carro {
                     productividad.pronosticoClima("");
                     vista.PronnosticoClima("Nublado");
                     break;
+
+                case 5:
+                    stop = true;
 
                 default:
                     break;

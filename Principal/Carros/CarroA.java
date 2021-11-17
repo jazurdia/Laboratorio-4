@@ -19,7 +19,7 @@ public class CarroA extends Carro {
     public void ex(){
         //Menu 2 ¿Que Modo desea usar?
         boolean stop = false;
-        while(stop == true){
+        while(stop == false){
             switch (vista.menuModo()) {
                 case 1: //MODO RADIO
                     boolean stop3a = false;
@@ -69,6 +69,12 @@ public class CarroA extends Carro {
                             case 3: // mostrar cancion
                                 reproductor.getCancionActual();
                                 vista.show("La cancion actual es: " + reproductor.getCancionActual());
+                                break;
+                            
+                            case 4:
+                                stop3b = true;
+                                break;
+
                             default:
                                 break;
                         }
@@ -81,6 +87,7 @@ public class CarroA extends Carro {
                         switch (vista.menuModoTelefonoA()) {
                             case 1:
                                 telefono.setConexion(vista.conexion()); // vista
+                                
                                 break;
 
                             case 2:
@@ -92,6 +99,7 @@ public class CarroA extends Carro {
 
                             case 4:
                                 telefono.llamarUltimo(); // devolver un método de la vista. 
+                                vista.show("Se ha llamado al último contacto.");
                                 break;
 
                             case 5:
@@ -109,6 +117,9 @@ public class CarroA extends Carro {
                     String [] presentacion = productividad.mostrarTarjeta(string[0], string[1], string[2]); //Hacen falta métodos de la vista. 
                     vista.mostrarTarjetaPresentacion(presentacion);
                     break;
+                
+                case 5:
+                    stop = true;
 
                 default:
                     break;
