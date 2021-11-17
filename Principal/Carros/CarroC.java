@@ -26,25 +26,27 @@ public class CarroC extends Carro {
                         switch (vista.menuModoRadio()){
                             case 1: // cambiar de emisora
                                 radio.nextEmisora();
-                                // vista para radio.getEmisora();
+                                vista.show("La emisora actual es: " + radio.getEmisoraActual());
                                 break;
                 
                             case 2:// guardar la emisora
                                 radio.guardarEmisora();
-                                // vista para ver emisoras guardadas. 
+                                vista.show("Se ha guardado la emisora");
                                 break;
                 
                             case 3: // cargar la emisora
                                 radio.setEmisora(vista.Emisora());//vista
-                                // vista para radio.getEmisoraActual();
+                                vista.show("La emisora actual es: " + radio.getEmisoraActual());
                                 break;
                 
                             case 4: // cambiar frecuencia
                                 radio.setFrecuencia(vista.AM_FM());
+                                vista.show("Se ha cambiado la frecuencia");
                                 break;
                             
                             case 5: // salir de este ciclo. 
                                 stop3a = true;
+                                break;
                         
                             default:
                                 break;
@@ -61,9 +63,17 @@ public class CarroC extends Carro {
                                 break;
                             case 2: // cambiar canción
                                 reproductor.cambiarCancion(vista.Cancion());
+                                vista.show("La cancion actual es: " + reproductor.getCancionActual());
                                 break;
                             case 3: // mostrar cancion
                                 reproductor.getCancionActual();
+                                vista.show("La cancion actual es: " + reproductor.getCancionActual());
+                                break;
+
+                            case 4:
+                                stop3b = false;
+                                break;
+
                             default:
                                 break;
                         }
