@@ -113,7 +113,7 @@ public class CarroS extends Carro{
 
                 case 4:
                     //Método de la vista introductorio?
-                    productividad.planificarViaje(vista.Origen(), vista.Destino(), vista.Fecha());
+                    vista.show(productividad.planificarViaje(vista.Origen(), vista.Destino(), vista.Fecha()));
                     break;
 
                 case 5:
