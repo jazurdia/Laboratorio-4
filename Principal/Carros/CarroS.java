@@ -57,8 +57,7 @@ public class CarroS extends Carro{
                 case 2: // MODO REPRODUCTOR
                     boolean stop3b = false;
                     while (stop3b == false){
-                        int menu3 = 0;
-                        switch (menu3) {
+                        switch (vista.menuModoReproduccion()) {
                             case 1: // seleccionar playlist. 
                                 reproductor.seleccionarPlaylist(vista.PlayList());//vista
                                 break;
@@ -76,8 +75,7 @@ public class CarroS extends Carro{
                 case 3://MODO TELEFONO S
                     boolean stop3c = false;
                     while (stop3c == false){
-                        int menu3 = 0;
-                        switch (menu3) {
+                        switch (vista.menuModoTelefonoS()) {
                             case 1:
                                 telefono.setConexion(vista.conexion()); // vista
                                 break;
@@ -103,6 +101,7 @@ public class CarroS extends Carro{
                     break;
 
                 case 4:
+                    //Método de la vista introductorio?
                     productividad.planificarViaje(vista.Origen(), vista.Destino(), vista.Fecha());
                     break;
 
