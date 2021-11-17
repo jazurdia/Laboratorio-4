@@ -278,7 +278,7 @@ public class Vista{
 			error();
 			scan.next();
 		}		
-		return conexion(); 
+		return estado; 
 	}
 
 	public String Origen() {
@@ -405,7 +405,7 @@ public class Vista{
 	/*Metodo para mostrar mensaje al usuario
 	*/
 	public void LlamarContacto(String contacto){
-		System.out.println("Se esta llamando a "+contacto);
+		System.out.println("Se esta llamando a " + contacto);
 	}
 
 	/*Metodo para mostrar mensaje al usuario
