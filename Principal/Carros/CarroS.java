@@ -98,6 +98,7 @@ public class CarroS extends Carro{
                                 for (int i = 0; i < contactos.size(); i++) {
                                     vista.show(contactos.get(i));
                                 }
+                                break;
 
                             
                             case 3:
