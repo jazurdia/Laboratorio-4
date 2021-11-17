@@ -3,10 +3,10 @@ package Principal.Modos;
 import java.util.ArrayList;
 
 public class ModoReproduccion extends Modo {
-    private ArrayList<String> listaDeReproduccionActual;
-    private ArrayList<String> listaA; // constante
-    private ArrayList<String> listaB; // constante
-    private ArrayList<String> listaC; // constante
+    private ArrayList<String> listaDeReproduccionActual = new ArrayList<String>();
+    private ArrayList<String> listaA = new ArrayList<String>(); // constante
+    private ArrayList<String> listaB = new ArrayList<String>(); // constante
+    private ArrayList<String> listaC = new ArrayList<String>(); // constante
     private int varInutil;
     private String cancionActual;
 
@@ -19,6 +19,7 @@ public class ModoReproduccion extends Modo {
      */
     public ModoReproduccion(int listaActual, int var){
         setModo(1); //Modo Reproduccion. 
+        crearListas();
         seleccionarPlaylist(listaActual);
         setVarInutil(var);
     }
@@ -102,6 +103,18 @@ public class ModoReproduccion extends Modo {
      */
     public int getVarInutil(){
         return varInutil;
+    }
+
+    public void crearListas(){
+        listaA.add("Smoke on the water / 04:35 / Deep Purple / Rock");
+        listaA.add("Just what I need / 03:45 / The Cars / Rock");
+        listaA.add("Highway To Hell / 03:35 / AC DC / Rock");
+        listaB.add("Dream on / 04:26 / AC DC / Rock");
+        listaB.add("Another One Bites The Dust / 03:34 / Queen / Rock");
+        listaB.add("Creep / 03:58 / Radiohead / Rock");
+        listaC.add("Don't Stop Believin / 04:35 / Journey / Rock");
+        listaC.add("Seven Nation Army / 04:00 / The White Strips / Rock");
+        listaC.add("I love Rock & Roll / 02:55 / Twisted Sister / Rock");
     }
 
     
