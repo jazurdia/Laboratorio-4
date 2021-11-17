@@ -2,7 +2,7 @@ package Principal;
 /***************************************************
 Vista.java
 Autor: Diego Morales, Javier Azurdia
-Fecha: 15/11/2021
+Fecha: 16/11/2021
 
 Vista. Responsable de toda interaccion con el usuario.
 ***************************************************/
@@ -132,8 +132,8 @@ public class Vista{
 					"2. Mostrar contactos\n" +
 					"3. Llamar a contacto\n" +
 					"4. Finalizar llamada\n"+
-					"4. Llamar al ultimo contactocon el que se habló\n"+
-					"5. Salir\n";
+					"5. Llamar al ultimo contacto con el que se habló\n"+
+					"6. Salir\n";
 
 		System.out.println(s);
 		op = scan.nextInt();
