@@ -88,19 +88,21 @@ public class CarroC extends Carro {
                                 telefono.setConexion(vista.conexion()); // vista
                                 break;
 
-                            case 2:
+                            case 3:
                                 telefono.llamarContacto(vista.Contacto()); // vista
+                                vista.show("Llamando...");
                                 break;
 
-                            case 3:
-                            vista.FinalizarLlamada();
-
                             case 4:
+                                vista.FinalizarLlamada();
+                                break;
+                                
+                            case 5:
                                 telefono.llamadaEnEspera(); //vista
                                 vista.LlamadaEnEspera();
                                 break;
 
-                            case 5:
+                            case 6:
                                 stop3c = true;
                         
                             default:
