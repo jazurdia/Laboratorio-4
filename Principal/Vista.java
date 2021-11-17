@@ -278,7 +278,7 @@ public class Vista{
 			error();
 			scan.next();
 		}		
-		return conexion(); 
+		return estado; 
 	}
 
 	public String Origen() {
