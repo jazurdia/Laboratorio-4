@@ -1,7 +1,5 @@
 package Principal;
 
-import java.util.ArrayList;
-
 import Principal.Carros.CarroA;
 import Principal.Carros.CarroC;
 import Principal.Carros.CarroS;
