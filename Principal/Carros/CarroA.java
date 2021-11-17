@@ -87,22 +87,23 @@ public class CarroA extends Carro {
                         switch (vista.menuModoTelefonoA()) {
                             case 1:
                                 telefono.setConexion(vista.conexion()); // vista
-                                
-                                break;
-
-                            case 2:
-                                telefono.llamarContacto(vista.Contacto()); // vista
                                 break;
 
                             case 3:
-                            vista.FinalizarLlamada();
+                                telefono.llamarContacto(vista.Contacto()); // vista
+                                vista.show("Llamando...");
+                                break;
 
                             case 4:
+                                vista.FinalizarLlamada();
+                                break;
+
+                            case 5:
                                 telefono.llamarUltimo(); // devolver un método de la vista. 
                                 vista.show("Se ha llamado al último contacto.");
                                 break;
 
-                            case 5:
+                            case 6:
                                 stop3c = true;
                         
                             default:
